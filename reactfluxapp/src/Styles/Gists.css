@@ -1,0 +1,30 @@
+.usergists
+{
+  margin-top:20px;
+  display: block;
+  border: 1px solid gray;
+  background-color: white;
+  width:80%;
+  margin:0 auto;
+}
+.gists-ul
+{
+  list-style-type: none; 
+  padding: 8px ;
+  border: 1px solid gray;
+}
+.gists-ul :hover 
+{
+  text-decoration:underline;
+  color:blue;
+}
+#filelink
+{
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+.gists-li
+{
+  padding: 15px;
+}
