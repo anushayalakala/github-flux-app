@@ -12,10 +12,10 @@ class GistStore extends BaseStore {
         if (username) {
             fetch(`https://api.github.com/users/${username}/gists`)
                 .then(data => data.json())
-                .then(data =>
-                    this.usergists = data,
+                .then((data) => {
+                    this.usergists = data;
                     this.emitChange()
-                );
+                });
         }
     }
     getUserGists() {
@@ -24,11 +24,10 @@ class GistStore extends BaseStore {
     fetchGistFiles(Id) {
         fetch(`https://api.github.com/gists/${Id}`)
         .then(data =>data.json())
-        .then(data =>{
-            this.gistfiles= data,
+        .then(data => {
+            this.gistfiles= data;
             this.emitChange()
-        }
-        )
+        });
     }
     getGistFiles() {
         return this.gistfiles;
@@ -37,9 +36,11 @@ class GistStore extends BaseStore {
         switch (action.type) {
             case "GET_GISTS": {
                 this.fetchUserGists();
+                break;
             }
             case "GET_GIST_FILES": {
                 this.fetchGistFiles(action.Id);
+                break;
             }
             default:
                 return true;
