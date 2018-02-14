@@ -3,7 +3,7 @@ import { List, ListItem } from 'material-ui/List';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import NavigationArrowBack from 'material-ui/svg-icons/navigation/arrow-back';
 import IconButton from 'material-ui/IconButton';
-import '../Styles/RepoInfo.css';
+import  '../Styles/RepoInfo.css';
 import RepositoryStore from '../Stores/RepositoryStore';
 import * as RepositoryActions from '../Actions/RepositoryActions';
 
@@ -32,19 +32,25 @@ export default class RepoInfo extends React.Component {
                 color: 'gray',
                 fontSize: 12
             },
-            hcode_style : {
-                padding: 5,
-                color: 'blue',
-                alignself: 'flex-end'
-            },
-            list_div_style : {
-                backgroundColor: 'white',
-                border: '1px solid gray'
-            },
             listitem_style: {
-                display: 'flex'
+                display: 'flex',
+                height: 80,
+                justifyContent: 'space-between',
+                border: '1px solid gray',
+                backgroundColor: 'white',
+            },
+            data_style : 
+            {
+                padding: 10
+            },
+            hashcode_style :
+            {
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                padding: 10,
+                color:'blue'
             }
-
         }
     }
     componentWillMount() {
@@ -79,11 +85,13 @@ export default class RepoInfo extends React.Component {
                                     const {committer} = commit;
                                     const commitdate = new Date(committer.date).toDateString();
                                     const hcode = (obj.sha).slice(0, 6);
-                                    return <div style={this.styles.list_div_style}><ListItem style={this.styles.listitem_style}>
+                                    return <div className= "listitem" style={this.styles.listitem_style}>
+                                    <div  style= {this.styles.data_style}>
                                         <div style={this.styles.msg_style}>{commit.message}</div>
                                         <div style={this.styles.name_style}>{committer.name} commited on {commitdate}</div>
-                                        <div style={this.styles.hcode_style}>{hcode}</div>
-                                    </ListItem></div>
+                                    </div>
+                                        <div style={this.styles.hashcode_style}>{hcode}</div>
+                                    </div>
                                 })
                             }
                         </List>
