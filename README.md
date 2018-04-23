@@ -11,7 +11,7 @@
 ## Quick Start
 
 ```shell
-$ git clone https://github.com/anushayalakala/React-FluxApp.git
+$ git clone https://github.com/anushayalakala/github-flux-app.git
 $ cd React-FluxApp
 $ npm install
 $ npm start
