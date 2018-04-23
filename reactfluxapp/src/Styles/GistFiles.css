@@ -1,15 +1,15 @@
-.content
-{
-  border:1px solid red;
-  margin-top:10px;
-  background-color: white;
-  width:80%;
-  margin:0 auto;
+:local(.name_style) {
+padding-left: 30px;
+padding-right: 30px;
 }
-/* .file-li
-{
-  border :1px solid gray;
-  margin-top:20px;
-  list-style-type: none;
-  padding: 30px;
-} */
+:local(.content_style) {
+padding-left: 30px;
+padding-right: 30px;
+}
+:local(.content) {
+border:1px solid red; 
+margin-top:10px;
+background-color: white;
+width: 80%;
+margin: 0 auto;
+}
