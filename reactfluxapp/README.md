@@ -5,6 +5,7 @@
 - Create React App
 - React (with JSX)
 - React Router
+- Flux Pattern
 - Material-UI
 
 ## Quick Start

@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import '../Styles/App.css';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import MainTabs from './MainTabs';
+import NavLinks from './NavLinks';
 
 class App extends Component {
   render() {
     return (
       <MuiThemeProvider>
       <div className="App">
-        <MainTabs/>
+        <NavLinks/>
       </div>
       </MuiThemeProvider>
     );

@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../Styles/GistFiles.css';
 import Divider from 'material-ui/Divider';
 import IconButton from 'material-ui/IconButton';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import NavigationArrowBack from 'material-ui/svg-icons/navigation/arrow-back';
 import GistStore from '../Stores/GistStore';
 import * as GistActions from '../Actions/GistActions';
+import styles from '../Styles/GistFiles.css';
 
 
 class Gistfile extends React.Component {
@@ -15,16 +15,6 @@ class Gistfile extends React.Component {
     this.state = { gistfiles: {} };
     this.getUserGistFiles = this.getUserGistFiles.bind(this);
     this.getGistfiles = this.getGistfiles.bind(this);
-    this.styles = {
-      name_style: {
-        paddingLeft: 30,
-        paddingRight: 30 
-      },
-      content_style: {
-        paddingLeft: 30,
-        paddingRight: 30
-      }
-    }
   }
   componentWillMount() {
     GistStore.addChangeListener(this.getUserGistFiles);
@@ -48,13 +38,13 @@ class Gistfile extends React.Component {
     const { gistfiles : { files = {} } } = this.state;
     const { goBack } = this.props;
     const filelist = Object.keys(files).map(name => <div>
-      <div style={this.styles.name_style}><h3 >{name}</h3></div>
-      <div style={this.styles.content_style}><p style={{ color: 'gray', border: '1px solid black', padding: 15 }}>{files[name].content}</p></div>
+      <div className={styles.name_style}><h3 >{name}</h3></div>
+      <div className={styles.content_style}><p style={{ color: 'gray', border: '1px solid black', padding: 15 }}>{files[name].content}</p></div>
       <Divider></Divider>
     </div>);
     return (
       <MuiThemeProvider>
-        <div className="content">
+        <div className= {styles.content}>
           <IconButton onClick={this.goBack.bind(this)} tooltip="go back and hold see the history"><NavigationArrowBack /></IconButton>
           <div>{filelist}</div>
         </div>

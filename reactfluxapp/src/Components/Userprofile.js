@@ -77,7 +77,7 @@ class Userprofile extends React.Component {
     return (
       <MuiThemeProvider>
         <div className="userprofile">
-          {error ? <div class="errormsg"> <label> User Not Found </label> </div> : ""}
+          {error ? <div className="errormsg"> <label> User Not Found </label> </div> : ""}
           <div className="userdata" >
             {(!error && id) ?
               <div>

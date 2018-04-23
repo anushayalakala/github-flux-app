@@ -50,14 +50,14 @@ export default class Repositories extends React.Component {
     return (
       <MuiThemeProvider>
         <div className="userrepos">
-          <List className="repo-ul">
+          <List className="repo-list">
             <div >
               {
                 this.state.repositories.map((obj) => {
                   const date = new Date(obj.updated_at).toDateString();
                   return <div>
                     <ListItem style={{ height: 120 }} key={obj.id} >
-                      <div style={style1} className="repo-li"><Link to={{ pathname: `repos/${obj.name}` }}>{obj.name}</Link></div>
+                      <div style={style1} className="repo-listitem"><Link to={{ pathname: `repos/${obj.name}` }}>{obj.name}</Link></div>
                       <div style={style2}>{obj.description}</div>
                       <div style={style2}>Updated on {date}</div>
                       <Divider></Divider>
