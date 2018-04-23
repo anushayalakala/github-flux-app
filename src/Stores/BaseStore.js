@@ -1,11 +1,6 @@
 import { EventEmitter } from 'events';
 
 class BaseStore extends EventEmitter {
-
-    constructor() {
-        super();
-    }
-
     emitChange() {
         this.emit('change');
     }

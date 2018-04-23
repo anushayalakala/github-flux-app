@@ -48,6 +48,6 @@ class GistStore extends BaseStore {
     }
 }
 
-const giststore = new GistStore;
+const giststore = new GistStore();
 dispatcher.register(giststore.handelActions.bind(giststore));
 export default giststore;

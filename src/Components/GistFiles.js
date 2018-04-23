@@ -36,7 +36,7 @@ class Gistfile extends React.Component {
   }
   render() {
     const { gistfiles : { files = {} } } = this.state;
-    const { goBack } = this.props;
+    //const { goBack } = this.props;
     const filelist = Object.keys(files).map(name => <div>
       <div className={styles.name_style}><h3 >{name}</h3></div>
       <div className={styles.content_style}><p style={{ color: 'gray', border: '1px solid black', padding: 15 }}>{files[name].content}</p></div>

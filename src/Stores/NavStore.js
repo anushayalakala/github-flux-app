@@ -29,7 +29,7 @@ class NavStore extends BaseStore {
     }
 }
 
-const navStore = new NavStore;
+const navStore = new NavStore();
 dispatcher.register(navStore.handelActions.bind(navStore));
 export default navStore;
 

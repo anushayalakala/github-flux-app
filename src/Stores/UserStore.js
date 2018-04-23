@@ -48,6 +48,7 @@ class UserStore extends BaseStore {
             case "GET_USER": {
                 this.fetchUserData();
                 this.isEdit = action.isEdit;
+                break;
             }
             default:
                 return true;
@@ -55,7 +56,7 @@ class UserStore extends BaseStore {
     }
 }
 
-const userStore = new UserStore;
+const userStore = new UserStore();
 dispatcher.register(userStore.handelActions.bind(userStore));
 export default userStore;
 

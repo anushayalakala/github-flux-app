@@ -1,5 +1,5 @@
 import React from 'react';
-import { List, ListItem } from 'material-ui/List';
+import { List } from 'material-ui/List';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import NavigationArrowBack from 'material-ui/svg-icons/navigation/arrow-back';
 import IconButton from 'material-ui/IconButton';

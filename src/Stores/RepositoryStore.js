@@ -43,16 +43,18 @@ class RepositoryStore extends BaseStore {
         switch (action.type) {
             case "GET_REPOSITORIES": {
                 this.fetchUserRepos();
+                break;
             }
             case "GET_REPOSITORY_COMMITS": {
                 this.fetchRepositoryCommits(action.reponame);
+                break;
             }
             default:
                 return true;
         }
     }
 }
-const repositoryStore = new RepositoryStore;
+const repositoryStore = new RepositoryStore();
 dispatcher.register(repositoryStore.handelActions.bind(repositoryStore));
 
 export default repositoryStore;
