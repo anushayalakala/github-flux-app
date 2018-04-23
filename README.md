@@ -12,7 +12,7 @@
 
 ```shell
 $ git clone https://github.com/anushayalakala/github-flux-app.git
-$ cd React-FluxApp
+$ cd github-flux-app
 $ npm install
 $ npm start
 ```
